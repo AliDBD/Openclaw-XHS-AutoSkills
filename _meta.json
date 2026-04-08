@@ -1,0 +1,8 @@
+{
+  "name": "xiaohongshu-auto-post",
+  "version": "1.0.0",
+  "description": "小红书全自动运营助手：素材生成、浏览器自动化发布、自动回评。",
+  "author": "Weixin-Xiaowei",
+  "triggers": ["自动发小红书", "运营小红书"],
+  "dependencies": ["social-media-marketing"]
+}
