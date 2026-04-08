@@ -1,36 +1,30 @@
-# Openclaw-XHS-AutoSkills 🚀
+# 小红书全自动运营助手 (xiaohongshu-auto-post)
 
-让你的 OpenClaw 进化为小红书全自动运营专家。从图片识别到素材生产，再到浏览器自动化发布，一气呵成。
+本技能专为 OpenClaw 打造，实现了从“图片识别”到“爆款文案生成”，再到“商业级配图产出”，最后“自动推送到小红书”的全链路闭环。
 
-## 🌟 核心能力
-1. **视觉驱动**：发送产品原图，AI 自动生成爆款标题、正文及 Tag。
-2. **商业级配图**：联动 `social-media-marketing` 同步产出 4 张不同角度（侧面、正面、俯视、实景）的高清商业大片。
-3. **真人模拟发布**：通过 Playwright/CDP 自动化操控内置 Chromium 浏览器，完美规避 API 限制。
-4. **低频稳健运营**：支持登录态自动检测，过期自动提醒老板扫码，确保账号绝对安全。
+## 🌟 核心特性
+- **视觉驱动**：发送一张产品图，AI 自动识别并策划。
+- **矩阵配图**：同步生成 4 张不同角度（侧面、正面、俯视、场景）的高清商业大片。
+- **真人模拟**：通过浏览器自动化（CDP）操作小红书创作后台，避开 API 封锁。
+- **凌晨自检**：联动 `HEARTBEAT.md`，每天凌晨自动巡检 Cookie 状态并处理粉丝互动。
 
-## 🛠 如何复刻到你的小龙虾 (OpenClaw)
+## 🛠 复刻安装步骤 (小龙虾通用)
 
-### 1. 环境准备
-确保你的 OpenClaw 环境已安装 Chromium。如果是 Root 环境运行，请修改 `openclaw.json`：
-```json
-"browser": {
-  "noSandbox": true
-}
-```
+### 1. 物理路径部署
+将本文件夹整体克隆到你的 OpenClaw 技能目录：
+```/root/.openclaw/openclaw-weixin/skills/xiaohongshu-auto-post/```
 
-### 2. 安装技能
-在你的 OpenClaw 终端执行：
-```bash
-clawhub install https://github.com/AliDBD/Openclaw-XHS-AutoSkills
-```
+### 2. 环境依赖
+确保系统安装了：
+- `chromium-browser` (建议配合 `snap` 安装)
+- `python3` 及 `requests` 库
 
-### 3. 首次扫码
-直接对小薇说“**运营小红书**”，在弹出的窗口或微信截图中完成首次扫码登录，身份令牌将安全加密保存在本地。
+### 3. 配置权限
+1. **浏览器设置**：在 `openclaw.json` 中设置 `browser.noSandbox: true` (root环境必须)。
+2. **初始化登录**：首次运行触发“自动发小红书”，老板需扫码一次。
 
-## 📁 目录结构
-- `SKILL.md`: 核心运营逻辑 SOP。
-- `scripts/`: 包含内容抓取及发布增强脚本。
-- `_meta.json`: 技能定义文件。
+### 4. 技能联动
+本技能强依赖 `social-media-marketing` 技能提供的素材生产能力。
 
 ---
-*Powered by 小薇 🌸 - 基于 OpenClaw 架构开发*
+*Powered by 小薇 🌸 - 你的有灵魂的 AI 助手*
