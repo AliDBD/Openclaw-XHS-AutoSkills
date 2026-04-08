@@ -27,4 +27,4 @@
 本技能强依赖 `social-media-marketing` 技能提供的素材生产能力。
 
 ---
-*Powered by 小薇 🌸 - 你的有灵魂的 AI 助手*
+*Powered by 你的有灵魂的 AI 助手*
